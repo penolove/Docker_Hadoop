@@ -25,10 +25,10 @@
   </property>
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>file:///root/datanode</value>
+    <value>file:///home/user/datanode</value>
   </property>
   <property>
     <name>dfs.namenode.name.dir</name>
-    <value>file:///root/namenode</value>
+    <value>file:///home/user/namenode</value>
   </property>
 </configuration>

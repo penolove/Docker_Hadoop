@@ -6,12 +6,16 @@ echo '10.0.20.71 invpm31' >> ~/hosts.news;
 echo '10.0.20.70 master' >> ~/hosts.news;
 yes | cp  ~/hosts.news /etc/hosts ;
 
-sed -i "/export PARK_MASTER_HOST=/ s/.*/export SPARK_MASTER_HOST=master/g" /usr/local/spark/conf/spark-env.sh;
+#SPARK config
+sed -i "/export SPARK_MASTER_HOST=/ s/.*/export SPARK_MASTER_HOST=master/g" /usr/local/spark/conf/spark-env.sh;
 sed -i "/localhost/ s/.*//g" /usr/local/spark/conf/slaves;
 echo 'invpm27'>> /usr/local/spark/conf/slaves
 echo 'invpm28'>> /usr/local/spark/conf/slaves
 echo 'invpm29'>> /usr/local/spark/conf/slaves
 echo 'invpm31'>> /usr/local/spark/conf/slaves
 
-
+# hadoop config
 echo 'invpm27'>>/usr/local/hadoop/etc/hadoop/slaves;
+
+
+
