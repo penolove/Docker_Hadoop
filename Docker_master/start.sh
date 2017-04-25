@@ -17,5 +17,6 @@ echo 'invpm31'>> /usr/local/spark/conf/slaves
 # hadoop config
 echo 'invpm27'>>/usr/local/hadoop/etc/hadoop/slaves;
 
-source /usr/local/hadoop/etc/hadoop/slaves;
-hdfs namenode -format ;
+source /home/user/.bashrc;
+#hdfs namenode -format ;
+su - user -c "hdfs namenode -format"

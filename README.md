@@ -10,9 +10,16 @@ cd Docker_pre_master;
 ## build hadoop_core
 - edit start.sh for slaves
 - edit core-site.xml for master setting
+
+### if master
 ```
 cd Docker_master;
 ./build.sh;
+```
+### if worker
+```
+cd Docker_worker;
+./build.sh
 ```
 
 ## run the service
