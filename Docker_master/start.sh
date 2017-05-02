@@ -16,7 +16,17 @@ echo 'invpm31'>> /usr/local/spark/conf/slaves
 
 # hadoop config
 echo 'invpm27'>>/usr/local/hadoop/etc/hadoop/slaves;
+echo 'invpm28'>>/usr/local/hadoop/etc/hadoop/slaves;
+echo 'invpm29'>>/usr/local/hadoop/etc/hadoop/slaves;
+echo 'invpm31'>>/usr/local/hadoop/etc/hadoop/slaves;
 
 source /home/user/.bashrc;
 #hdfs namenode -format ;
 su - user -c "hdfs namenode -format"
+
+su - user -c "ssh-keyscan -H invpm27 >> ~/.ssh/known_hosts"
+su - user -c "ssh-keyscan -H invpm28 >> ~/.ssh/known_hosts"
+su - user -c "ssh-keyscan -H invpm29 >> ~/.ssh/known_hosts"
+su - user -c "ssh-keyscan -H invpm31 >> ~/.ssh/known_hosts"
+su - user -c "ssh-keyscan -H master >> ~/.ssh/known_hosts"
+
