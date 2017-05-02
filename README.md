@@ -6,10 +6,13 @@ cd Docker_pre_master;
 ./build.sh
 ```
 
-
 ## build hadoop_core
 - edit start.sh for slaves
 - edit core-site.xml for master setting
+
+## if hbase
+- edit hdfs-site.xml (Docker_master_hbase)
+
 
 ### if master
 ```
